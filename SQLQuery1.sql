@@ -1,33 +1,38 @@
-﻿
+﻿-- Table: Khoa
+CREATE TABLE Khoa (
+    MaKhoa CHAR(10) PRIMARY KEY,
+    TenKhoa NVARCHAR(100) NOT NULL
+);
+
+-- Table: LOAITTAIKHOAN
+CREATE TABLE LOAITTAIKHOAN (
+    MaTK CHAR(10) PRIMARY KEY,
+    TenTK NVARCHAR(100) NOT NULL
+);
+
+-- Table: SinhVien
 CREATE TABLE SinhVien (
     MaSinhVien CHAR(10) PRIMARY KEY,
-    HoTen NVARCHAR(100),
-	LienHe CHAR(12),
+    HoTen NVARCHAR(100) NOT NULL,
+    sdt CHAR(12),
     NgaySinh DATE,
     GioiTinh NVARCHAR(10),
     TenLop NVARCHAR(100),
     MaKhoa CHAR(10),
-	DiemQT int CHECK (DiemQT BETWEEN 0 AND 100),
-	DiemTK int CHECK (DiemQT BETWEEN 0 AND 100),
+    DiemQT INT CHECK (DiemQT BETWEEN 0 AND 100),
+    DiemTK INT CHECK (DiemTK BETWEEN 0 AND 100),
     FOREIGN KEY (MaKhoa) REFERENCES Khoa(MaKhoa)
 );
 
--- Bảng Khoa
-CREATE TABLE Khoa (
-    MaKhoa CHAR(10) PRIMARY KEY,
-    TenKhoa NVARCHAR(100)
+-- Table: TAIKHOAN
+CREATE TABLE TAIKHOAN (
+    TEN NVARCHAR(100) PRIMARY KEY NOT NULL,
+    MK CHAR(50) NOT NULL,
+    MaTK CHAR(10),
+    FOREIGN KEY (MaTK) REFERENCES LOAITTAIKHOAN(MaTK)
 );
 
-CREATE TABLE TAIKHOAN(
-	TEN NVARCHAR(100),
-	MK CHAR(50),
-	MATK CHAR(10),
-		FOREIGN KEY (MaTK) REFERENCES LOAITTAIKHOAN(MaTK)
-);
-CREATE TABLE LOAITTAIKHOAN(
-MATK CHAR(10) PRIMARY KEY,
-TENTK NVARCHAR(100)
-);
+
 
 
 
@@ -41,7 +46,7 @@ VALUES
 
 
 -- Thêm dữ liệu vào bảng SinhVien
-INSERT INTO SinhVien (MaSinhVien, HoTen, LienHe, NgaySinh, GioiTinh, TenLop, MaKhoa, DiemQT, DiemTK)
+INSERT INTO SinhVien (MaSinhVien, HoTen, sdt, NgaySinh, GioiTinh, TenLop, MaKhoa, DiemQT, DiemTK)
 VALUES
     ('SV001', N'Nguyễn Văn A', '0987654321', '2002-05-10', N'Nam', N'Lớp CNTT01', 'K001', 85, 90),
     ('SV002', N'Trần Thị B', '0976543210', '2003-03-22', N'Nữ', N'Lớp CNTT02', 'K001', 78, 88),
@@ -57,8 +62,8 @@ VALUES
     ('TK003', N'Sinh viên');
 
 -- Thêm dữ liệu vào bảng TAIKHOAN
-INSERT INTO TAIKHOAN (MaTaiKhoan, Ten, MatKhau, MaTK)
+INSERT INTO TAIKHOAN (TEN, MK, MATK)
 VALUES
-    ('TK001A', N'Admin1', '123456', 'TK001'),
-    ('TK002B', N'GV_NguyenVanA', 'password', 'TK002'),
-    ('TK003C', N'SV_TranThiB', '123456', 'TK003');
+    (N'Admin1', '123456', 'TK001'),
+    (N'GV_NguyenVanA', 'password', 'TK002'),
+    (N'SV_TranThiB', '123456', 'TK003');
