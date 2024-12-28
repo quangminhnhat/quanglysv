@@ -1,24 +1,30 @@
-﻿-- Table: Khoa
+﻿create database doanDB
+go
+
+use doanDB
+go
+
+-- Table: Khoa
 CREATE TABLE Khoa (
-    MaKhoa CHAR(10) PRIMARY KEY,
+    MaKhoa VARCHAR(10) PRIMARY KEY,
     TenKhoa NVARCHAR(100) NOT NULL
 );
 
 -- Table: LOAITTAIKHOAN
 CREATE TABLE LOAITTAIKHOAN (
-    MaTK CHAR(10) PRIMARY KEY,
+    MaTK VARCHAR(10) PRIMARY KEY,
     TenTK NVARCHAR(100) NOT NULL
 );
 
 -- Table: SinhVien
 CREATE TABLE SinhVien (
-    MaSinhVien CHAR(10) PRIMARY KEY,
+    MaSinhVien VARCHAR(10) PRIMARY KEY,
     HoTen NVARCHAR(100) NOT NULL,
-    sdt CHAR(12),
+    sdt VARCHAR(12),
     NgaySinh DATE,
     GioiTinh NVARCHAR(10),
     TenLop NVARCHAR(100),
-    MaKhoa CHAR(10),
+    MaKhoa VARCHAR(10),
     DiemQT INT CHECK (DiemQT BETWEEN 0 AND 100),
     DiemTK INT CHECK (DiemTK BETWEEN 0 AND 100),
     FOREIGN KEY (MaKhoa) REFERENCES Khoa(MaKhoa)
@@ -27,11 +33,10 @@ CREATE TABLE SinhVien (
 -- Table: TAIKHOAN
 CREATE TABLE TAIKHOAN (
     TEN NVARCHAR(100) PRIMARY KEY NOT NULL,
-    MK CHAR(50) NOT NULL,
-    MaTK CHAR(10),
+    MK VARCHAR(50) NOT NULL,
+    MaTK VARCHAR(10),
     FOREIGN KEY (MaTK) REFERENCES LOAITTAIKHOAN(MaTK)
 );
-
 
 
 
@@ -58,12 +63,10 @@ VALUES
 INSERT INTO LOAITTAIKHOAN (MaTK, TenTK)
 VALUES
     ('TK001', N'Quản trị viên'),
-    ('TK002', N'Giáo viên'),
-    ('TK003', N'Sinh viên');
+    ('TK002', N'Giáo viên');
 
 -- Thêm dữ liệu vào bảng TAIKHOAN
 INSERT INTO TAIKHOAN (TEN, MK, MATK)
 VALUES
     (N'Admin1', '123456', 'TK001'),
-    (N'GV_NguyenVanA', 'password', 'TK002'),
-    (N'SV_TranThiB', '123456', 'TK003');
+    (N'GV_NguyenVanA', 'password', 'TK002');
