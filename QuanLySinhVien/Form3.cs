@@ -95,8 +95,11 @@ namespace QuanLySinhVien
                 if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
                 {
                     txtID.Text = row.Cells[0].Value.ToString();
-                    txtProcessScore.Text = row.Cells[6].Value.ToString();
-                    txtFinalScore.Text = row.Cells [7].Value.ToString();
+                    txtProcessScore.Text = row.Cells[6].Value == null || row.Cells[6].Value == DBNull.Value
+                        ? string.Empty: row.Cells[6].Value.ToString();
+
+                    txtFinalScore.Text = row.Cells[7].Value == null || row.Cells[7].Value == DBNull.Value
+                        ? string.Empty: row.Cells[7].Value.ToString();
                 }
             }
             catch
