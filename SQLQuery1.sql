@@ -38,6 +38,16 @@ CREATE TABLE TAIKHOAN (
     FOREIGN KEY (MaTK) REFERENCES LOAITTAIKHOAN(MaTK)
 );
 
+-- Table: GiangVien
+CREATE TABLE GiangVien (
+    MaGV VARCHAR(10) PRIMARY KEY,
+    HoTen NVARCHAR(100) NOT NULL,
+    sdt VARCHAR(12),
+    NgaySinh DATE,
+    GioiTinh NVARCHAR(10),
+    MaKhoa VARCHAR(10),
+    FOREIGN KEY (MaKhoa) REFERENCES Khoa(MaKhoa)
+);
 
 
 
@@ -70,3 +80,11 @@ INSERT INTO TAIKHOAN (TEN, MK, MATK)
 VALUES
     (N'Admin1', '123456', 'TK001'),
     (N'GV_NguyenVanA', 'password', 'TK002');
+
+
+	-- Thêm dữ liệu mẫu vào bảng GiangVien
+INSERT INTO GiangVien (MaGV, HoTen, sdt, NgaySinh, GioiTinh, MaKhoa)
+VALUES
+    ('GV001', N'Nguyễn Văn D', '0901234567', '1980-05-15', N'Nam', 'K001'),
+    ('GV002', N'Trần Thị E', '0907654321', '1985-09-22', N'Nữ', 'K002'),
+    ('GV003', N'Lê Văn F', '0912345678', '1978-12-10', N'Nam', 'K003');
