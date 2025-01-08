@@ -30,24 +30,27 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.txtContactNum = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.cmbFaculty = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.rdoFemale = new System.Windows.Forms.RadioButton();
+            this.cmbFaculty = new System.Windows.Forms.ComboBox();
             this.rdoMale = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtContactNum = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAddEdit = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.đăngKýTàiKhỏaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -55,7 +58,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(550, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(546, 31);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -80,50 +83,57 @@
             this.groupBox1.Controls.Add(this.txtName);
             this.groupBox1.Controls.Add(this.txtContactNum);
             this.groupBox1.Controls.Add(this.txtID);
-            this.groupBox1.Location = new System.Drawing.Point(17, 12);
+            this.groupBox1.Location = new System.Drawing.Point(13, 31);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(527, 407);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin giảng viên";
             // 
-            // txtID
+            // label7
             // 
-            this.txtID.Location = new System.Drawing.Point(186, 55);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(290, 22);
-            this.txtID.TabIndex = 0;
+            this.label7.Location = new System.Drawing.Point(26, 332);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(154, 23);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Khoa:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtContactNum
+            // label6
             // 
-            this.txtContactNum.Location = new System.Drawing.Point(186, 161);
-            this.txtContactNum.Name = "txtContactNum";
-            this.txtContactNum.Size = new System.Drawing.Size(290, 22);
-            this.txtContactNum.TabIndex = 1;
-            this.txtContactNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactNum_KeyPress);
+            this.label6.Location = new System.Drawing.Point(26, 217);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(154, 23);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Ngày sinh:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtName
+            // label5
             // 
-            this.txtName.Location = new System.Drawing.Point(186, 106);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(290, 22);
-            this.txtName.TabIndex = 2;
+            this.label5.Location = new System.Drawing.Point(26, 161);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(154, 23);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Số điện thoại:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // dateTimePicker1
+            // label3
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(186, 215);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(290, 22);
-            this.dateTimePicker1.TabIndex = 3;
+            this.label3.Location = new System.Drawing.Point(26, 106);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(154, 23);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Tên giảng viên:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // cmbFaculty
+            // label2
             // 
-            this.cmbFaculty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFaculty.FormattingEnabled = true;
-            this.cmbFaculty.Location = new System.Drawing.Point(186, 332);
-            this.cmbFaculty.Name = "cmbFaculty";
-            this.cmbFaculty.Size = new System.Drawing.Size(290, 24);
-            this.cmbFaculty.TabIndex = 4;
+            this.label2.Location = new System.Drawing.Point(26, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(154, 23);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Mã giảng viên:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 
@@ -145,6 +155,15 @@
             this.rdoFemale.Text = "nữ";
             this.rdoFemale.UseVisualStyleBackColor = true;
             // 
+            // cmbFaculty
+            // 
+            this.cmbFaculty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFaculty.FormattingEnabled = true;
+            this.cmbFaculty.Location = new System.Drawing.Point(186, 332);
+            this.cmbFaculty.Name = "cmbFaculty";
+            this.cmbFaculty.Size = new System.Drawing.Size(290, 24);
+            this.cmbFaculty.TabIndex = 4;
+            // 
             // rdoMale
             // 
             this.rdoMale.Location = new System.Drawing.Point(186, 277);
@@ -154,54 +173,38 @@
             this.rdoMale.Text = "Nam";
             this.rdoMale.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // dateTimePicker1
             // 
-            this.label2.Location = new System.Drawing.Point(26, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 23);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Mã giảng viên:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.dateTimePicker1.Location = new System.Drawing.Point(186, 215);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(290, 22);
+            this.dateTimePicker1.TabIndex = 3;
             // 
-            // label3
+            // txtName
             // 
-            this.label3.Location = new System.Drawing.Point(26, 106);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 23);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Tên giảng viên:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.txtName.Location = new System.Drawing.Point(186, 106);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(290, 22);
+            this.txtName.TabIndex = 2;
             // 
-            // label5
+            // txtContactNum
             // 
-            this.label5.Location = new System.Drawing.Point(26, 161);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(154, 23);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Số điện thoại:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.txtContactNum.Location = new System.Drawing.Point(186, 161);
+            this.txtContactNum.Name = "txtContactNum";
+            this.txtContactNum.Size = new System.Drawing.Size(290, 22);
+            this.txtContactNum.TabIndex = 1;
+            this.txtContactNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactNum_KeyPress);
             // 
-            // label6
+            // txtID
             // 
-            this.label6.Location = new System.Drawing.Point(26, 217);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(154, 23);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Ngày sinh:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label7
-            // 
-            this.label7.Location = new System.Drawing.Point(26, 332);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(154, 23);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "Khoa:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.txtID.Location = new System.Drawing.Point(186, 55);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(290, 22);
+            this.txtID.TabIndex = 0;
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(383, 459);
+            this.btnClose.Location = new System.Drawing.Point(379, 478);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(85, 32);
             this.btnClose.TabIndex = 8;
@@ -211,7 +214,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(239, 459);
+            this.btnDelete.Location = new System.Drawing.Point(235, 478);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(85, 32);
             this.btnDelete.TabIndex = 7;
@@ -221,7 +224,7 @@
             // 
             // btnAddEdit
             // 
-            this.btnAddEdit.Location = new System.Drawing.Point(94, 459);
+            this.btnAddEdit.Location = new System.Drawing.Point(90, 478);
             this.btnAddEdit.Name = "btnAddEdit";
             this.btnAddEdit.Size = new System.Drawing.Size(85, 32);
             this.btnAddEdit.TabIndex = 6;
@@ -229,23 +232,46 @@
             this.btnAddEdit.UseVisualStyleBackColor = true;
             this.btnAddEdit.Click += new System.EventHandler(this.btnAddEdit_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.đăngKýTàiKhỏaToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1296, 28);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // đăngKýTàiKhỏaToolStripMenuItem
+            // 
+            this.đăngKýTàiKhỏaToolStripMenuItem.Name = "đăngKýTàiKhỏaToolStripMenuItem";
+            this.đăngKýTàiKhỏaToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.đăngKýTàiKhỏaToolStripMenuItem.Text = "Đăng ký tài khỏa";
+            this.đăngKýTàiKhỏaToolStripMenuItem.Click += new System.EventHandler(this.đăngKýTàiKhỏaToolStripMenuItem_Click);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1296, 527);
+            this.ClientSize = new System.Drawing.Size(1296, 551);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAddEdit);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form4";
             this.Text = "Thông tin giáo viên";
             this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -269,5 +295,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAddEdit;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem đăngKýTàiKhỏaToolStripMenuItem;
     }
 }

@@ -16,3 +16,4 @@ D:\QuanLySinhVien\QuanLySinhVien\obj\Debug\QuanLySinhVien.exe
 D:\QuanLySinhVien\QuanLySinhVien\obj\Debug\QuanLySinhVien.pdb
 D:\QuanLySinhVien\QuanLySinhVien\obj\Debug\QuanLySinhVien.formTeacher.resources
 D:\QuanLySinhVien\QuanLySinhVien\obj\Debug\QuanLySinhVien.Form4.resources
+D:\QuanLySinhVien\QuanLySinhVien\obj\Debug\QuanLySinhVien.Form5.resources

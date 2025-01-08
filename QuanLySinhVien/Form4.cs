@@ -177,5 +177,13 @@ namespace QuanLySinhVien
                 e.Handled = true;
             }
         }
+
+        private void đăngKýTàiKhỏaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form5 form5 = new Form5();
+            form5.FormClosed += (s, args) => Show();
+            form5.Show();
+            Hide();
+        }
     }
 }
